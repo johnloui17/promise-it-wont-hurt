@@ -6,13 +6,13 @@ My solutions for the [promise-it-wont-hurt](https://github.com/stevekane/promise
 
 | # | Exercise | Status |
 |---|----------|--------|
-| 01 | Warm Up | ⬜ |
-| 02 | Fulfill a Promise | ⬜ |
-| 03 | Reject a Promise | ⬜ |
-| 04 | To Reject or Not to Reject | ⬜ |
-| 05 | Always Asynchronous | ⬜ |
-| 06 | Shortcuts | ⬜ |
-| 07 | Promise After Promise | ⬜ |
+| 01 | Warm Up | ✅ |
+| 02 | Fulfill a Promise | ✅ |
+| 03 | Reject a Promise | ✅ |
+| 04 | To Reject or Not to Reject | ✅ |
+| 05 | Always Asynchronous | ✅ |
+| 06 | Shortcuts | ✅ |
+| 07 | Promise After Promise | ✅ |
 | 08 | Values and Promises | ⬜ |
 | 09 | Throw an Error | ⬜ |
 | 10 | An Important Rule | ⬜ |
