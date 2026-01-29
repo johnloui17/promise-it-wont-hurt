@@ -1,4 +1,4 @@
-"use strict"
+
 
 // ============================================================================
 // Exercise 1 of 13: Warm up
@@ -99,4 +99,103 @@
 // Chain promises using .then() - uses global first() and second() functions
 // ============================================================================
 
-first().then(second).then(console.log)
+// first().then(second).then(console.log)
+
+// const attachTitle = (name) => {
+//     return "DR. " + name;
+
+
+// }
+// Promise.resolve("MANHATTAN").then(attachTitle).then(console.log)
+
+
+
+
+// const parsePromised = (jsonData) => {
+
+//     return new Promise(function (fulfill, reject) {
+
+//         try {
+//             var result = JSON.parse(jsonData);
+//             fulfill(result);
+
+//         }
+//         catch (error) {
+//             reject(error.message);
+
+//         }
+//     })
+// }
+
+// parsePromised(process.argv[2]).then(null, console.log)
+
+// const AlwaysThrow = () => {
+//     throw new Error("OH NOES");
+
+// }
+// const iterate = (number) => {
+//     console.log(number);
+//     return number + 1
+
+// }
+// Promise.resolve(1).then(iterate).then(iterate).then(iterate).then().then(iterate).then(iterate).then(AlwaysThrow).then(iterate).then(iterate).then(iterate).then(null, function (error) {
+//     console.log(error.message);
+// })
+
+// const all = (promise1, promise2) => {
+
+//     return new Promise(function (fulfill, reject) {
+//         let counter = 0;
+//         let results = [];
+
+//         promise1.then(function (value) {
+//             results[0] = value;
+//             counter++;
+//             if (counter == 2) {
+//                 fulfill(results)
+//             }
+//         })
+//         promise2.then(function (value) {
+//             results[1] = value;
+//             counter++;
+//             if (counter == 2) {
+//                 fulfill(results)
+//             }
+//         })
+//     })
+
+// }
+// all(getPromise1(), getPromise2()).then(console.log);
+
+
+// ============================================================================
+// Exercise 12 of 13: Fetch JSON
+// Fetch JSON over HTTP using q-io/http
+// ============================================================================
+
+// var qhttp = require('q-io/http');
+
+// qhttp.read("http://localhost:1337/")
+//     .then(JSON.parse)
+//     .then(console.log)
+//     .done();
+
+
+// ============================================================================
+// Exercise 13 of 13: Do some work
+// Chain HTTP requests - get user ID from session cache, then fetch user data
+// ============================================================================
+
+var qhttp = require('q-io/http');
+
+// Step 1: Get user ID from session cache (port 7000)
+// Step 2: Use ID to fetch user object from database (port 7001)
+// Step 3: Parse and log the user object
+qhttp.read("http://localhost:7000/")
+    .then(function (id) {
+        return qhttp.read("http://localhost:7001/" + id);
+    })
+    .then(function (data) {
+        console.log(JSON.parse(data));
+    })
+    .done();
