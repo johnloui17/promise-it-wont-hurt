@@ -13,12 +13,12 @@ My solutions for the [promise-it-wont-hurt](https://github.com/stevekane/promise
 | 05 | Always Asynchronous | ✅ |
 | 06 | Shortcuts | ✅ |
 | 07 | Promise After Promise | ✅ |
-| 08 | Values and Promises | ⬜ |
-| 09 | Throw an Error | ⬜ |
-| 10 | An Important Rule | ⬜ |
-| 11 | Multiple Promises | ⬜ |
-| 12 | Fetch JSON | ⬜ |
-| 13 | Do Some Work | ⬜ |
+| 08 | Values and Promises | ✅ |
+| 09 | Throw an Error | ✅ |
+| 10 | An Important Rule | ✅ |
+| 11 | Multiple Promises | ✅ |
+| 12 | Fetch JSON | ✅ |
+| 13 | Do Some Work | ✅ |
 
 ## Running the Workshop
 
